@@ -44,8 +44,8 @@ cur.execute("""
 """, ("Ukraine", longitude, latitude))
 ```
 
-![Figure 1 – Database creation example](images/figure01.png)  
-![Figure 2 – Region points insert](images/figure02.png)
+![Figure 1 – Database creation example](images/figure1.png)  
+![Figure 2 – Region points insert](images/figure2.png)
 
 **Visualization in Folium:**
 
@@ -58,8 +58,8 @@ WHERE region = 'Ukraine';
 The average coordinate is used to center the map.  
 Results are saved as `map_ukraine.html`.
 
-![Figure 3 – Ukraine border visualization](images/figure03.png)  
-![Figure 4 – Kyiv region polygon example](images/figure04.png)
+![Figure 3 – Ukraine border visualization](images/figure3.png)  
+![Figure 4 – Kyiv region polygon example](images/figure4.png)
 
 ---
 
@@ -100,16 +100,16 @@ SELECT ST_AsEWKB(cell) FROM grid;
 **Two display strategies:**
 
 - **Clipped to country border (precise but partial cells at the boundary):**  
-  ![Figure 5 – Grid clipped to Ukraine](images/figure05.png)  
-  ![Figure 6 – Grid clipped (zoom)](images/figure06.png)
+  ![Figure 5 – Grid clipped to Ukraine](images/figure5.png)  
+  ![Figure 6 – Grid clipped (zoom)](images/figure6.png)
 
 - **Whole cells intersecting the border (may extend outside):**  
-  ![Figure 7 – Whole cells intersecting Ukraine](images/figure07.png)  
-  ![Figure 8 – Whole cells (zoom)](images/figure08.png)
+  ![Figure 7 – Whole cells intersecting Ukraine](images/figure7.png)  
+  ![Figure 8 – Whole cells (zoom)](images/figure8.png)
 
 **Kyiv Region – 1×1 km grid**  
 (uses the same approach with cell size 1000 m):
-![Figure 9 – Kyiv 1×1 km grid overview](images/figure09.png)  
+![Figure 9 – Kyiv 1×1 km grid overview](images/figure9.png)  
 ![Figure 10 – Kyiv 1×1 km grid zoom](images/figure10.png)
 
 **Saving unique grid vertices** (dedupe shared corners):
