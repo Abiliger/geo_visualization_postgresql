@@ -44,8 +44,8 @@ cur.execute("""
 """, ("Ukraine", longitude, latitude))
 ```
 
-![Figure 1 – Database creation example](images/figure1.png)  
-![Figure 2 – Region points insert](images/figure2.png)
+![Figure 1 – Database creation example](image/figure1.png)  
+![Figure 2 – Region points insert](image/figure2.png)
 
 **Visualization in Folium:**
 
@@ -58,8 +58,8 @@ WHERE region = 'Ukraine';
 The average coordinate is used to center the map.  
 Results are saved as `map_ukraine.html`.
 
-![Figure 3 – Ukraine border visualization](images/figure3.png)  
-![Figure 4 – Kyiv region polygon example](images/figure4.png)
+![Figure 3 – Ukraine border visualization](image/figure3.png)  
+![Figure 4 – Kyiv region polygon example](image/figure4.png)
 
 ---
 
@@ -100,17 +100,17 @@ SELECT ST_AsEWKB(cell) FROM grid;
 **Two display strategies:**
 
 - **Clipped to country border (precise but partial cells at the boundary):**  
-  ![Figure 5 – Grid clipped to Ukraine](images/figure5.png)  
-  ![Figure 6 – Grid clipped (zoom)](images/figure6.png)
+  ![Figure 5 – Grid clipped to Ukraine](image/figure5.png)  
+  ![Figure 6 – Grid clipped (zoom)](image/figure6.png)
 
 - **Whole cells intersecting the border (may extend outside):**  
-  ![Figure 7 – Whole cells intersecting Ukraine](images/figure7.png)  
-  ![Figure 8 – Whole cells (zoom)](images/figure8.png)
+  ![Figure 7 – Whole cells intersecting Ukraine](image/figure7.png)  
+  ![Figure 8 – Whole cells (zoom)](image/figure8.png)
 
 **Kyiv Region – 1×1 km grid**  
 (uses the same approach with cell size 1000 m):
-![Figure 9 – Kyiv 1×1 km grid overview](images/figure9.png)  
-![Figure 10 – Kyiv 1×1 km grid zoom](images/figure10.png)
+![Figure 9 – Kyiv 1×1 km grid overview](image/figure9.png)  
+![Figure 10 – Kyiv 1×1 km grid zoom](image/figure10.png)
 
 **Saving unique grid vertices** (dedupe shared corners):
 ```sql
@@ -123,8 +123,8 @@ uniq AS (
 -- Insert uniq points into ukraine_grid_points
 ```
 
-![Figure 11 – Console insert log](images/figure11.png)  
-![Figure 12 – Vertices visualization](images/figure12.png)
+![Figure 11 – Console insert log](image/figure11.png)  
+![Figure 12 – Vertices visualization](image/figure12.png)
 
 ---
 
@@ -167,17 +167,17 @@ JOIN ukraine_grid_sectors s
 
 **Visualizations:**  
 - No grid overlay (sectors only):  
-  ![Figure 13 – Sectors only](images/figure13.png)  
-  ![Figure 14 – Sectors only (zoom)](images/figure14.png)
+  ![Figure 13 – Sectors only](image/figure13.png)  
+  ![Figure 14 – Sectors only (zoom)](image/figure14.png)
 
 - With grid overlay:  
-  ![Figure 15 – Sectors + grid](images/figure15.png)  
-  ![Figure 16 – Sectors + grid (zoom)](images/figure16.png)
+  ![Figure 15 – Sectors + grid](image/figure15.png)  
+  ![Figure 16 – Sectors + grid (zoom)](image/figure16.png)
 
 - Larger sectors for demonstration (`radius=50000`):  
-  ![Figure 17 – 50 km sectors (no grid)](images/figure17.png)  
-  ![Figure 18 – 50 km sectors (zoom)](images/figure18.png)  
-  ![Figure 19 – 50 km sectors with grid](images/figure19.png)
+  ![Figure 17 – 50 km sectors (no grid)](image/figure17.png)  
+  ![Figure 18 – 50 km sectors (zoom)](image/figure18.png)  
+  ![Figure 19 – 50 km sectors with grid](image/figure19.png)
 
 ---
 
@@ -208,25 +208,25 @@ JOIN ukraine_grid_sectors s
 
 | # | Filename | Suggested Caption |
 |---|----------|-------------------|
-| 1 | images/figure01.png | Database creation example |
-| 2 | images/figure02.png | Insert region points |
-| 3 | images/figure03.png | Ukraine border (national) |
-| 4 | images/figure04.png | Kyiv region polygon |
-| 5 | images/figure05.png | Grid clipped to border (overview) |
-| 6 | images/figure06.png | Grid clipped to border (zoom) |
-| 7 | images/figure07.png | Whole-intersecting cells (overview) |
-| 8 | images/figure08.png | Whole-intersecting cells (zoom) |
-| 9 | images/figure09.png | Kyiv 1×1 km grid (overview) |
-| 10 | images/figure10.png | Kyiv 1×1 km grid (zoom) |
-| 11 | images/figure11.png | Console insertion log |
-| 12 | images/figure12.png | Unique vertices map |
-| 13 | images/figure13.png | Sectors without grid (overview) |
-| 14 | images/figure14.png | Sectors without grid (zoom) |
-| 15 | images/figure15.png | Sectors with grid (overview) |
-| 16 | images/figure16.png | Sectors with grid (zoom) |
-| 17 | images/figure17.png | 50 km sectors (no grid) |
-| 18 | images/figure18.png | 50 km sectors (zoom) |
-| 19 | images/figure19.png | 50 km sectors with grid |
+| 1 | image/figure1.png | Database creation example |
+| 2 | image/figure2.png | Insert region points |
+| 3 | image/figure3.png | Ukraine border (national) |
+| 4 | image/figure4.png | Kyiv region polygon |
+| 5 | image/figure5.png | Grid clipped to border (overview) |
+| 6 | image/figure6.png | Grid clipped to border (zoom) |
+| 7 | image/figure7.png | Whole-intersecting cells (overview) |
+| 8 | image/figure8.png | Whole-intersecting cells (zoom) |
+| 9 | image/figure9.png | Kyiv 1×1 km grid (overview) |
+| 10 | image/figure10.png | Kyiv 1×1 km grid (zoom) |
+| 11 | image/figure11.png | Console insertion log |
+| 12 | image/figure12.png | Unique vertices map |
+| 13 | image/figure13.png | Sectors without grid (overview) |
+| 14 | image/figure14.png | Sectors without grid (zoom) |
+| 15 | image/figure15.png | Sectors with grid (overview) |
+| 16 | image/figure16.png | Sectors with grid (zoom) |
+| 17 | image/figure17.png | 50 km sectors (no grid) |
+| 18 | image/figure18.png | 50 km sectors (zoom) |
+| 19 | image/figure19.png | 50 km sectors with grid |
 
 ---
 
