@@ -44,7 +44,7 @@ cur.execute("""
 """, ("Ukraine", longitude, latitude))
 ```
 
-![Figure 1 – Database creation example](image/figure1.png)  
+![Figure 1 – Database creation example](image/figure1.PNG)  
 ![Figure 2 – Region points insert](image/figure2.png)
 
 **Visualization in Folium:**
